@@ -75,4 +75,10 @@ describe('SongQueue', function() {
       SongModel.prototype.play.restore();
     });
   });
+
+  // describe('removeSong', function() {
+  //   it ('removes a song from the queue, when user clicks', function() {
+
+  //   });
+  // });
 });
