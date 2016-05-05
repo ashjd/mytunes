@@ -5,7 +5,7 @@ var Songs = Backbone.Collection.extend({
 
   initialize: function() {
     this.on('enqueue', function(song) {
-      //console.log("in songs");
+      console.log(song);
     });
   }
 });
