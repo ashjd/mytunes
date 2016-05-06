@@ -20,6 +20,17 @@ var Songs = Backbone.Collection.extend({
     this.fetch({
       success: (function(model) {
         //this.trigger('libraryChanged', model);
+        if (window.actions) {
+          //get relevant song
+          var sgs = model.where({title: window.actions});
+          if (sgs) {
+            console.log(sgs[0]);
+            sgs[0].enqueue();
+            sgs[0].play();
+          }
+          //then reset val
+          window.actions = null;
+        }
       }).bind(this)
     });
   }
